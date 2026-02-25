@@ -1,7 +1,7 @@
 export const brandSettings = {
     logo: {
         src: "", // Add logo image URL here (e.g., "/assets/logo.png")
-        alt: "[Brand Name]",
+        alt: "Splitly",
         variations: [ // you might have wordmarks / different color variants than what is listed here, that's fine just adjust it
             { 
                 name: "Primary - Light Background", 
@@ -35,9 +35,9 @@ export const brandSettings = {
     },
     favicon: "/favicon.svg", // Add favicon URL here
     typography: {
-        primaryFont: "Helvetica Neue",  // this will automatically get set as the page font
-        secondaryFont: "Verdana", // dont be a bum, go find some google/adobe fonts you like. just make sure to load them in the stylesheet or Layout astro file 
-        baseSize: "16px",
+        primaryFont: "Fira Sans",  // this will automatically get set as the page font
+        secondaryFont: "Lato", // dont be a bum, go find some google/adobe fonts you like. just make sure to load them in the stylesheet or Layout astro file 
+        baseSize: "19px",
         lineHeight: "1.5",
         paragraphSpacing: "2"
     },
