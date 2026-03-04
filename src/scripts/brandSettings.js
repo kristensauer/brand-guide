@@ -43,11 +43,9 @@ export const brandSettings = {
     },
     palette: [ // these will load automatically into your page into the color section
         { name: "White", hex: "#ffffff" },
-        { name: "Black", hex: "#000000" },
-        { name: "Primary Blue", hex: "#0056b3" },
-        { name: "Secondary Teal", hex: "#17a2b8" },
-        { name: "Accent Yellow", hex: "#ffc107" },
-        { name: "Dark Gray", hex: "#343a40" },
-        { name: "Light Gray", hex: "#f8f9fa" }
+        { name: "Black", hex: "#020B0B" },
+        { name: "Primary Pink", hex: "#FD43A2" },
+        { name: "Secondary Purple", hex: "#6A3AFF" },
+        { name: "Card Gray", hex: "#D6D6D6" },
     ]
 };
