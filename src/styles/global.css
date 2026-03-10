@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 /* * WIREFRAME BASE STYLES 
     * Students: Replace these styles with your brand's specific CSS.
     */
@@ -6,6 +8,9 @@
     box-sizing: border-box;
 }
 :root {
+    --font-primary: "Fira Sans", sans-serif;
+    --font-secondary: "Lato", sans-serif;
+
     --bg-color: var(--color-light-gray, #ffffff);
     --text-color: var(--color-dark-gray, #020B0B);
     --wireframe-border: #D6D6D6;
@@ -45,7 +50,7 @@
         --heading-color: #FD43A2;
         --muted-text: #aaaaaa;
         --placeholder-bg: #2d2d2d;
-        --table-header-bg: #262626;
+        --table-header-bg: #010101;
         --link-color: #FD43A2;
         --link-hover-bg: #412734;
         --link-active-bg: #412734;
@@ -74,9 +79,16 @@
         --link-active-color: #FD43A2;
     }
 }
+h1, h2, h3, h4 {
+    font-family: var(--font-primary, sans-serif);
+    line-height: var(--line-height-base, 1.6);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    font-family: var(--font-primary, sans-serif);
+    font-family: var(--font-secondary, sans-serif);
     line-height: var(--line-height-base, 1.6);
     color: var(--text-color);
     background-color: var(--bg-color);
