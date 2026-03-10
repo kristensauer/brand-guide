@@ -2,23 +2,21 @@
 import InstructionNote from '../InstructionNote.astro';
 import ColorSwatch from '../ColorSwatch.astro';
 import { brandSettings } from '../../scripts/brandSettings.js';
----
+--->
 <section id="color">
                 <h2>Colors</h2>
                 
-                <InstructionNote>
-                    Define your brand's primary and extended color palettes. Research and document the required WCAG contrast ratios for text and non-text UI elements, then verify your palette meets these standards.
-                </InstructionNote>
+
 
                 <h3>Brand Palette</h3>
                 <ColorSwatch />
 
                 <h3>Color Usage Policy</h3>
-                <p><strong>Use of Color:</strong> [Define your brand's policy on relying solely on color to convey meaning, state, or information (e.g., in error states or links). Assume your user is marketing and design team membrs who might not have any prior accessibility knowledge.]</p>
+                <p><strong>Use of Color:</strong> Color is an important aspect of Splitli’s identity, but color alone is never used to communicate meaning, state, or important information. Some users have color deficiencies, are low vision, or use assistive technologies that do not interpret color differences. Because of this, every color-based element has an additional indicator such as text labels or icons. </p>
 
                 <h3>Text Contrast Playground</h3>
-                <p>[Define the minimum contrast ratio required for normal text vs. large text according to WCAG 2.1 AA, explain to users what the tool below helps them do and how they can use it]</p>
-                
+                <p>Splitli follows the WCAG 2.1 AA contrast standards to ensure text remains readable for users with low vision or visual impairments. For normal text, the ratio requirement is 4.5 : 1, and large text (18+ points or 14+ points bold) is 3 : 1. Higher contrast improves the readability and experience for everyone.</p>
+                <p>Below is the Text Contrast Playground, which allows designers to test color combinations before using them in designs. To use the tool, first select a background color from the dropdown menu. Next, choose a text color from the menu as well. After selecting these items, a visual representation will appear below with a contrast ratio, as well as a grid with WCAG 2.1 AA and AAA pass/fail indicators.</p>
                 <div id="contrast-calculator" class="contrast-calculator" data-palette={JSON.stringify(brandSettings.palette)}>
                     <div class="calculator-controls">
                         <div class="control-group">
@@ -84,13 +82,13 @@ import { brandSettings } from '../../scripts/brandSettings.js';
                 </div>
 
                 <h3>Non-Text Contrast (UI Elements)</h3>
-                <p>[Define the minimum contrast ratio required for interactive components like buttons, input borders, and icons against their adjacent backgrounds.]</p>
+                <p>Interactive components must meet contrast requirements as well; Splitli follows the WCAG 2.1 AA non-text contrast standard of 3:1 for buttons, icons, focus indicators, and active navigation states. Sufficient contrast ensures users with low vision or cognitive disabilities can easily identify where actions can occur.</p>
 
                 <h3>Inline Links</h3>
-                <p>[Define the visual style for inline links to ensure they are clearly identifiable within content.]</p>
+                <p>Inline links appear within body text and must be clear and identifiable so users can easily distinguish them from the surrounding content.</p>
                 <ul>
-                    <li><strong>Text Decoration:</strong> [Specify if links are underlined. WCAG recommends underlines so links are distinguishable by more than just color.]</li>
-                    <li><strong>Color Contrast:</strong> [Ensure link color meets 4.5:1 contrast against the background.]</li>
-                    <li><strong>Hover & Focus:</strong> [Describe the visual change on interaction (e.g., darker shade, background highlight) to indicate interactivity.]</li>
+                    <li><strong>Text Decoration:</strong> Inline links are always underlined. Underlines ensure links remain recognizable for all users. Links should never rely on color alone to indicate interactivity, as some users are color deficient, low vision, or utilize assistive technologies. </li>
+                    <li><strong>Color Contrast:</strong> Link text must meet a minimum contrast ratio of 4.5:1 against the background to maintain readability. Additionally, the link color should remain visually distinct from the surrounding body text.</li>
+                    <li><strong>Hover & Focus:</strong> When users hover over or focus on a link, a visible state change should occur to confirm interactivity. Some examples of acceptable interaction indicators include a shade change to the link color, a background highlight, an underline, and a visible focus outline for keyboard navigation.</li>
                 </ul>
             </section>

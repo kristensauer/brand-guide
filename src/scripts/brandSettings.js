@@ -43,9 +43,10 @@ export const brandSettings = {
     },
     palette: [ // these will load automatically into your page into the color section
         { name: "White", hex: "#ffffff" },
-        { name: "Black", hex: "#020B0B" },
+        { name: "Black", hex: "#000000" },
         { name: "Primary Pink", hex: "#FD43A2" },
         { name: "Secondary Purple", hex: "#6A3AFF" },
-        { name: "Card Gray", hex: "#D6D6D6" },
+        { name: "Card Light Gray", hex: "#D6D6D6" },
+        { name: "Card Dark Gray", hex: "#363636" }
     ]
 };
