@@ -139,8 +139,9 @@ h1, h2, h3 {
 
 h2 {
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     margin-top: 40px;
+    margin-bottom: 24px;
 }
 
 /* Wireframe Placeholders */
