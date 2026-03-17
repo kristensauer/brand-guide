@@ -1,42 +1,42 @@
 export const brandSettings = {
     logo: {
-        src: "", // Add logo image URL here (e.g., "/assets/logo.png")
+        src: "public/Splitli Logos-01.png",
         alt: "Splitli",
         variations: [ // you might have wordmarks / different color variants than what is listed here, that's fine just adjust it
             { 
                 name: "Primary - Light Background", 
-                src: "", // Add image path
+                src: "public/ES493 Splitli Logos-01.jpg",
                 bg: "#ffffff", 
                 darkText: true,
                 description: "Use this version on white or light backgrounds."
             },
             { 
                 name: "Primary - Dark Background", 
-                src: "", // Add image path
+                src: "public/ES493 Splitli Logos-02.jpg",
                 bg: "#333333", 
                 darkText: false,
                 description: "Use this version on dark or brand-colored backgrounds."
             },
             { 
                 name: "Monochrome - Black", 
-                src: "", // Add image path
+                src: "public/ES493 Splitli Logos-03.jpg",
                 bg: "#ffffff", 
                 darkText: true,
                 description: "For black and white print or single-color applications."
             },
             { 
                 name: "Monochrome - White", 
-                src: "", // Add image path
+                src: "public/ES493 Splitli Logos-04.jpg",
                 bg: "#000000", 
                 darkText: false,
                 description: "For dark backgrounds where color is not permitted."
             }
         ]
     },
-    favicon: "/favicon.svg", // Add favicon URL here
+    favicon: "public/ES493 Splitli Logos.svg",
     typography: {
-        primaryFont: "Fira Sans",  // this will automatically get set as the page font
-        secondaryFont: "Lato", // dont be a bum, go find some google/adobe fonts you like. just make sure to load them in the stylesheet or Layout astro file 
+        primaryFont: "Fira Sans", 
+        secondaryFont: "Lato",
         baseSize: "19px",
         lineHeight: "1.5",
         paragraphSpacing: "2"
