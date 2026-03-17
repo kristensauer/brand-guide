@@ -1,20 +1,31 @@
 ---
 import { brandSettings } from '../../scripts/brandSettings.js';
 import InstructionNote from '../InstructionNote.astro';
+
+const enlargedLogoVariations = new Set([
+    'Primary - Light Background',
+    'Primary - Dark Background',
+    'Monochrome - Black',
+    'Monochrome - White'
+]);
 ---
 <section id="logo">
     <h2>Logo & Wordmark</h2>
     
-    <InstructionNote>
-        Upload and document your logo variations here. Ensure you provide versions for light and dark backgrounds, as well as monochrome options for print or restricted color environments.
-    </InstructionNote>
 
     <div class="logo-grid">
         {brandSettings.logo.variations.map(variation => (
             <div class="logo-card">
                 <div class="logo-preview" style={`background-color: ${variation.bg}; color: ${variation.darkText ? '#000' : '#fff'}`}>
                     {variation.src ? (
-                        <img src={variation.src} alt={`${brandSettings.logo.alt} - ${variation.name}`} />
+                        <img
+                            src={variation.src}
+                            alt={`${brandSettings.logo.alt} - ${variation.name}`}
+                            class:list={[
+                                'logo-image',
+                                { 'logo-image-enlarged': enlargedLogoVariations.has(variation.name) }
+                            ]}
+                        />
                     ) : (
                         <div class="placeholder-text">[Logo: {variation.name}]</div>
                     )}
@@ -48,11 +59,16 @@ import InstructionNote from '../InstructionNote.astro';
         justify-content: center;
         min-height: 200px;
         border-bottom: 1px solid var(--border-light);
+        overflow: hidden;
     }
-    .logo-preview img {
+    .logo-image {
         max-width: 100%;
         height: auto;
         max-height: 100px;
+        transform-origin: center;
+    }
+    .logo-image-enlarged {
+        transform: scale(3);
     }
     .logo-info {
         padding: 1rem;

@@ -1,11 +1,26 @@
 ---
 import { brandSettings } from '../scripts/brandSettings.js';
+
+const normalizePublicPath = (path) => {
+    if (!path) return '';
+    return path.startsWith('public/') ? `/${path.slice(7)}` : path;
+};
+
+const logoSrcLight = normalizePublicPath(brandSettings.logo.src);
+const logoSrcDark = normalizePublicPath(brandSettings.logo.srcDark || brandSettings.logo.src);
 ---
 <aside class="sidebar">
     <header class="sidebar-header">
         <div class="brand">
-            {brandSettings.logo.src ? (
-                <img src={brandSettings.logo.src} alt={brandSettings.logo.alt} style="max-width: 150px; height: auto; margin-bottom: 1rem;" />
+            {logoSrcLight ? (
+                <img
+                    id="brand-logo"
+                    src={logoSrcLight}
+                    data-logo-light={logoSrcLight}
+                    data-logo-dark={logoSrcDark}
+                    alt={brandSettings.logo.alt}
+                    style="max-width: 150px; height: auto; margin-bottom: 1rem;"
+                />
             ) : (
                 <div class="placeholder-box logo-placeholder">
                     [Brand Logo Image Placeholder]

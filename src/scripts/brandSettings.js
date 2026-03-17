@@ -1,39 +1,40 @@
 export const brandSettings = {
     logo: {
         src: "public/Splitli Logos-01.png",
+        srcDark: "public/Splitli Logos-02.png",
         alt: "Splitli",
         variations: [ // you might have wordmarks / different color variants than what is listed here, that's fine just adjust it
             { 
                 name: "Primary - Light Background", 
-                src: "public/ES493 Splitli Logos-01.jpg",
+                src: "public/Splitli Logos-01.png",
                 bg: "#ffffff", 
                 darkText: true,
                 description: "Use this version on white or light backgrounds."
             },
             { 
                 name: "Primary - Dark Background", 
-                src: "public/ES493 Splitli Logos-02.jpg",
+                src: "public/Splitli Logos-02.png",
                 bg: "#333333", 
                 darkText: false,
                 description: "Use this version on dark or brand-colored backgrounds."
             },
             { 
                 name: "Monochrome - Black", 
-                src: "public/ES493 Splitli Logos-03.jpg",
+                src: "public/Splitli Logos-03.png",
                 bg: "#ffffff", 
                 darkText: true,
                 description: "For black and white print or single-color applications."
             },
             { 
                 name: "Monochrome - White", 
-                src: "public/ES493 Splitli Logos-04.jpg",
+                src: "public/Splitli Logos-04.png",
                 bg: "#000000", 
                 darkText: false,
                 description: "For dark backgrounds where color is not permitted."
             }
         ]
     },
-    favicon: "public/ES493 Splitli Logos.svg",
+    favicon: "/favicon.ico",
     typography: {
         primaryFont: "Fira Sans", 
         secondaryFont: "Lato",

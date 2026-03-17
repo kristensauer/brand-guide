@@ -234,11 +234,21 @@
 
     // --- Theme Toggle Logic ---
     const themeToggle = document.getElementById('theme-toggle');
+
+    const updateBrandLogo = (theme) => {
+        const brandLogo = document.getElementById('brand-logo');
+        if (!brandLogo) return;
+
+        const lightSrc = brandLogo.dataset.logoLight;
+        const darkSrc = brandLogo.dataset.logoDark || lightSrc;
+        brandLogo.src = theme === 'dark' ? darkSrc : lightSrc;
+    };
     
     // Function to set theme
     const setTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
+        updateBrandLogo(theme);
     };
 
     // Check for saved theme preference, otherwise fallback to system preference
