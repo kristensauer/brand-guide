@@ -8,18 +8,26 @@ const enlargedLogoVariations = new Set([
     'Monochrome - Black',
     'Monochrome - White'
 ]);
+
+const normalizePublicPath = (path) => {
+    if (!path) return '';
+    return path.startsWith('public/') ? `/${path.slice(7)}` : path;
+};
 ---
 <section id="logo">
     <h2>Logo & Wordmark</h2>
     
 
     <div class="logo-grid">
-        {brandSettings.logo.variations.map(variation => (
+        {brandSettings.logo.variations.map(variation => {
+            const imageSrc = normalizePublicPath(variation.src);
+
+            return (
             <div class="logo-card">
                 <div class="logo-preview" style={`background-color: ${variation.bg}; color: ${variation.darkText ? '#000' : '#fff'}`}>
-                    {variation.src ? (
+                    {imageSrc ? (
                         <img
-                            src={variation.src}
+                            src={imageSrc}
                             alt={`${brandSettings.logo.alt} - ${variation.name}`}
                             class:list={[
                                 'logo-image',
@@ -35,7 +43,8 @@ const enlargedLogoVariations = new Set([
                     <p>{variation.description}</p>
                 </div>
             </div>
-        ))}
+            );
+        })}
     </div>
 </section>
 
